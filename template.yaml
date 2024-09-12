@@ -44,22 +44,22 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
-      - title: Environment Inputs
-        required:
-          - environment_name
-        properties:
-          environment_name:
-            title: Description
-            type: string
-            description: Name of the environment
-          wait_timer:
-            title: Description
-            type: integer
-            description: Number between 0 and 43,200 (30 days)
-          prevent_self_review:
-            title: Description
-            type: boolean
-            description: Whether or not a user who created the job is prevented from approving their own job.
+    - title: Environment Inputs
+      required:
+        - environment_name
+      properties:
+        environment_name:
+          title: Description
+          type: string
+          description: Name of the environment
+        wait_timer:
+          title: Description
+          type: integer
+          description: Number between 0 and 43,200 (30 days)
+        prevent_self_review:
+          title: Description
+          type: boolean
+          description: Whether or not a user who created the job is prevented from approving their own job.
   steps:
     - id: template
       name: Fetch Skeleton + Template
