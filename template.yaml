@@ -29,10 +29,10 @@ spec:
           title: Owner
           type: string
           description: Owner of the component
-          ui:field: OwnerPicker
+          ui:field: MultiEntityPicker
           ui:options:
-            allowedKinds:
-              - Group
+            catalogFilter:
+              kind: [Group, User]
     - title: Choose a location
       required:
         - repoUrl
