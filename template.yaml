@@ -68,7 +68,7 @@ spec:
           ui:options:
             catalogFilter: 
               kind: ['Group', 'User']
-            maxNoOfEntities: 2
+            maxNoOfEntities: 6
   steps:
     # - id: template
     #   name: Fetch Skeleton + Template
