@@ -49,11 +49,11 @@ spec:
         - environmentName
       properties:
         environmentName:
-          title: Description
+          title: Environment Name
           type: string
           description: Name of the environment
         waitTimer:
-          title: Description
+          title: Wait Timer
           type: integer
           description: Number between 0 and 43,200 (30 days)
         preventSelfReview:
