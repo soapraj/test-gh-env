@@ -46,17 +46,17 @@ spec:
               - github.com
     - title: Environment Inputs
       required:
-        - environment_name
+        - environmentName
       properties:
-        environment_name:
+        environmentName:
           title: Description
           type: string
           description: Name of the environment
-        wait_timer:
+        waitTimer:
           title: Description
           type: integer
           description: Number between 0 and 43,200 (30 days)
-        prevent_self_review:
+        preventSelfReview:
           title: Prevent Self Review
           type: boolean
           description: Whether or not a user who created the job is prevented from approving their own job.
@@ -98,9 +98,10 @@ spec:
       action: github:environment:create
       input:
         repoUrl: ${{ parameters.repoUrl }}
-        name: ${{ parameters.environment_name }}
-        wait_timer: ${{ parameters.wait_timer }}
-        prevent_self_review: ${{ parameters.prevent_self_review }}
+        name: ${{ parameters.environmentName }}
+        wait_timer: ${{ parameters.waitTimer }}
+        prevent_self_review: ${{ parameters.preventSelfReview }}
+        reviewers: ${{ parameters.reviewers }}
 
     - id: register
       name: Register
