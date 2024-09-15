@@ -64,11 +64,9 @@ spec:
           title: Reviewers
           type: array
           description: The people or teams that may review jobs that reference the environment. Add up to six users or teams as reviewers that have at least read access to the repository.
-          ui:field: OwnerPicker
+          ui:field: MultiEntityPicker
           ui:options:
-            allowedKinds:
-              - Group
-              - User
+            catalogFilter: ['Group', 'User']
   steps:
     # - id: template
     #   name: Fetch Skeleton + Template
